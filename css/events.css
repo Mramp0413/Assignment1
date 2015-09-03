@@ -94,24 +94,6 @@ a:hover, #navigation a:hover {
   padding-top: 10px;
   padding-bottom: 0; }
 
-#footer {
-  clear: both;
-  width: 760px;
-  font-size: 90%;
-  background: #DADADA;
-  text-align: left;
-  border-top: 2px solid #2765AF;
-  padding-top: 20px;
-  /* VARAIABLE CHANGED */
-  padding-right: 1px;
-  padding-bottom: 20px;
-  /* VARAIABLE CHANGED */
-  padding-left: 1px;
-  border-radius: 0px 0px 12px 15px; }
-
-#copyright {
-  float: right; }
-
 /*headings*/
 #content h1 {
   font-size: 170%;
@@ -153,6 +135,25 @@ a:hover, #navigation a:hover {
   color: #333333; }
 
 /* footer css */
+#footer {
+  clear: both;
+  width: 760px;
+  font-size: 90%;
+  background: #DADADA;
+  text-align: left;
+  border-top: 2px solid #2765AF;
+  padding-top: 20px;
+  /* VARAIABLE CHANGED */
+  padding-right: 1px;
+  padding-bottom: 20px;
+  /* VARAIABLE CHANGED */
+  padding-left: 1px;
+  border-radius: 0px 0px 12px 15px; }
+
+#copyright {
+  float: right; }
+
+/* MIXINS ADDED */
 #footer li {
   margin: 0;
   padding: 0;
@@ -167,7 +168,13 @@ a:hover, #navigation a:hover {
   text-align: center;
   /* VARIABLE CHANGED */
   padding: 0 5px 0 0;
-  text-decoration: underline; }
+  text-decoration: underline;
+  width: 50px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #A2A2A2;
+  /* MIXIN ADDED */ }
 
 .clearfix:after {
   content: ".";
