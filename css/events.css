@@ -1,4 +1,5 @@
 /*defaults*/
+/* 2 sass built in functions */
 body {
   color: #000000;
   margin: 20px 0;
@@ -13,11 +14,13 @@ body {
   margin: 0;
   padding: 0 0 15px 0; }
 
+/* NEST THE PARAGRAPH INTO THE BODY */
 a {
   color: #000000;
   text-decoration: underline; }
 
-a:hover {
+a:hover, #navigation a:hover {
+  /* USED FOR EXTEND */
   color: #CCCCCC;
   text-decoration: none;
   /* VARAIBALE CHANGED */ }
@@ -139,12 +142,14 @@ a:hover {
   display: inline; }
 
 #navigation a {
-  color: #225799;
+  color: blue;
+  /* 2 Sass built-in */
   padding: 0 20px 0 0;
   text-decoration: none; }
 
 /* VARAIBALE CHANGED */
 #navigation a:hover {
+  /* Used for extend */
   color: #333333; }
 
 /* footer css */
@@ -156,7 +161,8 @@ a:hover {
   display: inline; }
 
 #footer a {
-  color: #000000;
+  color: invert;
+  /* 2 Sass built-in */
   font-weight: bold;
   text-align: center;
   /* VARIABLE CHANGED */

@@ -7,6 +7,11 @@ $textAlign: center;
 $listText: none;
 $padding: 20px;
 
+/* 2 sass built in functions */
+$color: blue;
+$colorInvert: invert;
+
+
 body 	{
 	color: #000000;
 	margin: $padding 0;
@@ -19,14 +24,13 @@ body 	{
 	background-position: left top;
     margin:0; 
     padding:0 0 15px 0; 
-
-}
+}  /* NEST THE PARAGRAPH INTO THE BODY */
 a		{
     color:#000000; 
     text-decoration:underline; 
 }
 
-a:hover	{
+a:hover	{ /* USED FOR EXTEND */
 	color: #CCCCCC;
 	text-decoration: $listText; /* VARAIBALE CHANGED */
 }
@@ -121,7 +125,14 @@ a:hover	{
 	color: #FFF;
 	text-align: justify;
 }
-#logo h1		{font-weight:normal; font-size:170%; margin:0; padding:0; color:#225799; }
+
+#logo h1		{
+    
+    font-weight:normal; 
+    font-size:170%; 
+    margin:0; 
+    padding:0; 
+    color:#225799; }
 
 
 /*navigation*/
@@ -137,11 +148,12 @@ a:hover	{
     display:inline; 
 }
 #navigation a		{
-    color:#225799; 
+    color: $color;  /* 2 Sass built-in */
     padding:0 $padding 0 0; 
     text-decoration:$listText; } /* VARAIBALE CHANGED */
 
 #navigation a:hover	{
+    @extend a:hover; /* Used for extend */
 	color: #333333;
 }
 
@@ -153,7 +165,7 @@ a:hover	{
     display:inline;
 }
 #footer a		{
-    color:#000000;
+    color: $colorInvert; /* 2 Sass built-in */
     font-weight:bold;
     text-align: $textAlign; /* VARIABLE CHANGED */
     padding:0 5px 0 0;
